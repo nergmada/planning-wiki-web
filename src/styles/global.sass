@@ -1,0 +1,120 @@
+@use 'colours'
+@import "sass-breakpoints"
+
+@mixin google-font($family)
+    @import url("https://fonts.googleapis.com/css?family=#{$family}")
+@include google-font($family: 'Open+Sans&display=swap')
+@include google-font($family: 'Quicksand&display=swap')
+
+
+body
+    margin: 0
+    padding: 0
+    overflow-x: hidden
+
+body, a, p, input
+    font-family: 'Open Sans', sans-serif
+    @include breakpoint('xs')
+        font-size: 16px
+    @include breakpoint('sm')
+        font-size: 14px
+    @include breakpoint('md')
+        font-size: 16px
+    @include breakpoint('lg')
+        font-size: 20px
+
+h1, h2, h3
+    font-family: 'Quicksand', sans-serif
+
+a
+    text-decoration: none
+
+.medium-font
+    font-size: 1.2rem
+
+.large-font
+    font-size: 1.5rem
+
+h3
+    font-size: 2rem
+
+h2
+    font-size: 3rem
+
+h1
+    font-size: 4rem
+
+.gutter
+    @include breakpoint('xs')
+        margin: 0 10px
+        padding: 0 5px
+    @include breakpoint('sm')
+        margin: 0 15px
+        padding: 0 5px
+    @include breakpoint('md')
+        margin: 0 15px
+        padding: 0 10px
+    @include breakpoint('lg')
+        margin: 0 auto
+        padding: 0 15px
+        max-width: 1200px
+pre
+    background-color: #111
+    padding: 10px
+
+code
+    width: 100%
+    background-color: #111
+    color: #eee
+
+.lm
+    @each $name, $hex in colours.$lm-colours
+        .bg-#{$name}
+            background-color: $hex
+        .fg-#{$name}
+            color: $hex
+        .btn-#{$name}
+            text-decoration: none
+            padding: 10px
+            border-radius: 5px
+            background-color: $hex
+            color: #fff
+            &:hover
+                color: #aaa
+    a
+        color: colours.$lm-fg
+        &:hover
+            color: colours.$lm-accent-1
+        &:active
+            color: colours.$lm-active-1
+.dm
+    @each $name, $hex in colours.$dm-colours
+        .bg-#{$name}
+            background-color: $hex
+        .fg-#{$name}
+            color: $hex
+
+        .btn-#{$name}
+            text-decoration: none
+            padding: 10px
+            border-radius: 5px
+            background-color: $hex
+            color: #fff
+            &:hover
+                color: #aaa
+    a
+        color: colours.$dm-fg
+        &:hover
+            color: colours.$dm-accent-1
+        &:active
+            color: colours.$dm-active-1
+
+.flexbox
+    display: flex
+
+.spread
+    justify-content: space-between
+
+.center
+    align-items: center
+

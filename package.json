@@ -1,0 +1,48 @@
+{
+  "name": "planning-wiki-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "develop": "rm -rf build && npx webpack serve --mode development",
+    "build": "rm -rf ./build && npx webpack --mode production && touch ./build/robots.txt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "axios": "^0.21.1",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.6",
+    "dotenv-webpack": "^7.0.3",
+    "extract-css-chunks-webpack-plugin": "^4.9.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "json-loader": "^0.5.7",
+    "markdown": "^0.5.0",
+    "markdown-it": "^12.1.0",
+    "markdown-it-table": "^2.0.4",
+    "require-from-string": "^2.0.2",
+    "sass": "^1.34.1",
+    "sass-breakpoints": "^2.1.0",
+    "sass-loader": "^12.0.0",
+    "sitemap-webpack-plugin": "^1.1.0",
+    "style-loader": "^2.0.0",
+    "svelte": "^3.38.2",
+    "svelte-hmr": "^0.12.9",
+    "svelte-inline-svg": "^1.0.8",
+    "svelte-loader": "^3.1.1",
+    "url-loader": "^4.1.1",
+    "val-loader": "^4.0.0",
+    "validator": "^13.6.0",
+    "webpack": "^5.38.1",
+    "webpack-bundle-analyzer": "^4.4.2",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "dotenv": "^8.6.0"
+  }
+}
