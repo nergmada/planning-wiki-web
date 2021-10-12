@@ -22,7 +22,7 @@
                 </div>
                 <p><b>Author</b>: {language.authors}</p>
                 <p><b>Year Released</b>: {language.released.split('-')[0]}</p>
-                <p class="underline">{language.description}</p>
+                <p class="underline"><i>{language.description}</i></p>
                 <Body text={language.page} />
                 <p>Last Updated: {new Date(language.published_at).toLocaleString()}</p>
             {/await}

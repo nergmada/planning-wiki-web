@@ -27,7 +27,7 @@
                 </div>
                 <p><b>Author</b>: {planner.authors}</p>
                 <p><b>Year Released</b>: {planner.released.split('-')[0]}</p>
-                <p class="underline">{planner.description}</p>
+                <p class="underline"><i>{planner.description}</i></p>
                 <Body text={planner.page} />
                 <p>Last Updated: {new Date(planner.published_at).toLocaleString()}</p>
             {/await}
