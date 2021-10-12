@@ -16,7 +16,7 @@
             {:then planner}
                 <div class="flexbox spread center">
                     <h1>{planner.name}</h1>
-                    <div>
+                    <div class="flexbox col">
                         {#if planner.paper}
                             <a href={planner.paper} class="btn-accent-1">Paper</a>
                         {/if}
@@ -57,5 +57,15 @@
     }
     .rightcol {
         width: 25%;
+    }
+    h1 {
+        max-width: 80%;
+    }
+    a {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .col {
+        flex-direction: column;
     }
 </style>
