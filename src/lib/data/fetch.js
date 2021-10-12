@@ -17,11 +17,10 @@ const recursiveRewrite = (data) => {
     return data;
 }
 
-export default async function(url, rewrite = false) {
+export default async function(url) {
     try {
         const { data } = await get(`${CMS_URL}${url}`);
-        console.log(data);
-        return rewrite ? recursiveRewrite(data) : data;
+        return data;
     } catch(err) {
         return {};
     }
